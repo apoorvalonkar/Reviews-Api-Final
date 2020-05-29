@@ -1,0 +1,683 @@
+-------------------------------------------------------------------------------
+Test set: com.udacity.course3.reviews.ReviewsApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 9.146 s <<< FAILURE! - in com.udacity.course3.reviews.ReviewsApplicationTests
+testProductEntity(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testCommentRepository(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testReviewRepository(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testReviewEntity(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testCommentEntity(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testFindProductbyReview(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
+testFindReviewByComment(com.udacity.course3.reviews.ReviewsApplicationTests)  Time elapsed: 0 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: 
+
+Migration V01__initialise.sql failed
+------------------------------------
+SQL State  : 42001
+Error Code : 42001
+Message    : Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+Location   : db/migration/V01__initialise.sql (/Users/apoorvalonkar/Desktop/Java_course_Udacity/FINAL SUBMITTED PROJECT/ReviewsApiFinal/target/classes/db/migration/V01__initialise.sql)
+Line       : 7
+Statement  : create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id)
+
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: 
+Syntax error in SQL statement "CREATE TABLE REVIEWS(
+    REVIEW_ID INT NOT NULL AUTO_INCREMENT,
+    PRODUCT_ID INT NOT NULL,
+    REVIEW_TITLE VARCHAR(1000) NOT NULL,
+    CONSTRAINT REVIEW_PK PRIMARY KEY (REVIEW_ID),
+    CONSTRAINT PRODUCT_REVIEW_FK FOREIGN KEY (PRODUCT_ID) REFERENCES PRODUCTS (PRODUCT_ID) [*]"; expected "INDEX, ON, NOT, DEFERRABLE, NOCHECK, CHECK, ,, )"; SQL statement:
+create table reviews(
+    review_id int not null auto_increment,
+    product_id int not null,
+    review_title varchar(1000) not null,
+    constraint review_pk primary key (review_id),
+    constraint product_review_fk foreign key (product_id) references products (product_id) [42001-199]
+
